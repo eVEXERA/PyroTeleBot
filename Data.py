@@ -23,7 +23,7 @@ class Data:
     # Rest Buttons
     buttons = [
         [InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram")],
-        [InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")]      
+        [InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")],
         [InlineKeyboardButton("𝙼𝙰𝙸𝙽𝚃𝙴𝙽𝙰𝙽𝙲𝙴 𝙱𝚈", url="https://t.me/TeamDeecode")],
         [
             InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴", callback_data="help"),
