@@ -45,15 +45,15 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                
          await callback_query.answer()
         
-        await generate_session(bot, callback_query.message)
+         generate_session(bot, callback_query.message)
             else:
-                await generate_session(bot, callback_query.message, telethon=True)
+                 generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
 
     elif query == "telethon":
               await callback_query.answer()
-          await generate_session(bot, callback_query.message)
+          generate_session(bot, callback_query.message)
             else:
                 await generate_session(bot, callback_query.message, pyrogram=True)
         except Exception as e:
