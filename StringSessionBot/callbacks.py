@@ -42,11 +42,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
     elif query == "pyrogram":
-        await callback_query.message.reply(
-             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram")
-               ]])
-        
+               
          await callback_query.answer()
         try:
             if query == "pyrogram":
@@ -57,12 +53,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
 
     elif query == "telethon":
-         await callback_query.message.reply(
-             reply_markup=InlineKeyboardMarkup([[
-                 InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")
-                 ]])
-             
-     await callback_query.answer()
+              await callback_query.answer()
         try:
             if query == "telethon":
                 await generate_session(bot, callback_query.message)
