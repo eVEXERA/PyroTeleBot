@@ -46,7 +46,7 @@ class Data:
     ABOUT = """
 **𝙰𝙱𝙾𝚄𝚃 𝙳𝙴𝙲𝙾𝙳𝙴 𝙱𝙾𝚃𝚉**
 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 : [𝙳𝙴𝙲𝙾𝙳𝙴](HTTPS://T.ME/DECODESUPPORT)
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : [𝚂𝙰𝙼𝙼𝚈](https://t.me/Braydanxd)
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : [𝚂𝙰𝙼𝙼𝚈](https://github.com/BrayDanXD)
    
 [𝙵𝙾𝙻𝙻𝙾𝚆 𝙾𝙽 𝙶𝙸𝚃𝙷𝚄𝙱](https://github.com/BRAYDNAXD)
 𝙳𝙴𝙲𝙾𝙳𝙴 𝙼𝚄𝚂𝙸𝙲 : [𝙳𝙴𝙿𝙻𝙾𝚈 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃](https://GitHub.com/braydanxd/promusic)
