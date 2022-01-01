@@ -44,9 +44,8 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
     elif query == "pyrogram":
                
          await callback_query.answer()
-        try:
-            if query == "pyrogram":
-                await generate_session(bot, callback_query.message)
+        
+        await generate_session(bot, callback_query.message)
             else:
                 await generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
@@ -54,9 +53,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
 
     elif query == "telethon":
               await callback_query.answer()
-        try:
-            if query == "telethon":
-                await generate_session(bot, callback_query.message)
+          await generate_session(bot, callback_query.message)
             else:
                 await generate_session(bot, callback_query.message, pyrogram=True)
         except Exception as e:
