@@ -41,19 +41,34 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
-    elif query == "generate":
+    elif query == "pyrogram":
         await callback_query.message.reply(
              reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram"),
-                InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")
-            ]])
-        )
-    elif query in ["pyrogram", "telethon"]:
+                InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram")
+               ]])
+        
+    elif query in ["pyrogram"]:
         await callback_query.answer()
         try:
             if query == "pyrogram":
                 await generate_session(bot, callback_query.message)
             else:
                 await generate_session(bot, callback_query.message, telethon=True)
+        except Exception as e:
+            await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
+
+    elif query == "telethon":
+         await callback_query.message.reply(
+             reply_markup=InlineKeyboardMarkup([[
+                 InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")
+                 ]])
+             
+   elif query in ["telethon"]:
+        await callback_query.answer()
+        try:
+            if query == "telethon":
+                await generate_session(bot, callback_query.message)
+            else:
+                await generate_session(bot, callback_query.message, pyrogram=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
