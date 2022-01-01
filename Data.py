@@ -4,50 +4,53 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-𝙷𝙴𝙻𝙻𝙾 {}
-𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 𝚆𝙾𝚁𝙺𝚂 𝚃𝙾 𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝙶𝙴𝚃 𝚂𝙴𝚂𝚂𝙸𝙾𝙽 𝚂𝚃𝚁𝙸𝙽𝙶. 
-𝙼𝙰𝙽𝙰𝙶𝙴𝙳 𝙱𝚈 @TeamDeeCoDe
-     """
+Hello {}
+If you don't trust this bot,
+1) don't read this message
+2) block bot or delete chat
+This Bot Works To Help You Get Session String Via Bot. Recommendations If You Want To Take String Use Another Account,
+Managed By @nouseridfound
+    """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton("𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴 𝚃𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴 𝚂𝚃𝚁𝙸𝙽𝙶", callback_data="generate")],
-        [InlineKeyboardButton(text="𝙱𝙰𝙲𝙺", callback_data="home")]
-]
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
+        [InlineKeyboardButton(text="Home", callback_data="home")]
+    ]
 
-generate_button = [
-        [InlineKeyboardButton("𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴 𝚃𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴 𝚂𝚃𝚁𝙸𝙽𝙶", callback_data="generate")]
-]
+    generate_button = [
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")]
+    ]
 
-start_buttons = [
-        [InlineKeyboardButton("𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴 𝚃𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴 𝚂𝚃𝚁𝙸𝙽𝙶", callback_data="generate")],
-        [InlineKeyboardButton("𝙼𝙰𝙸𝙽𝚃𝙴𝙽𝙰𝙽𝙲𝙴 𝙱𝚈", url="https://t.me/TeamDeecode")],
+    # Rest Buttons
+    buttons = [
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
+        [InlineKeyboardButton("Maintaned By", url="https://t.me/nouseridfound")],
         [
-            InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴", callback_data="help"),
-            InlineKeyboardButton("𝙰𝙱𝙾𝚄𝚃 𝙳𝙴𝙲𝙾𝙳𝙴", callback_data="About")
+            InlineKeyboardButton("How to use me", callback_data="help"),
+            InlineKeyboardButton("About", callback_data="about")
       ],
-        [InlineKeyboardButton("𝙾𝚃𝙷𝙴𝚁 𝙳𝙴𝙲𝙾𝙳𝙴 𝙱𝙾𝚃𝚂", url="https://telegra.ph/DeCoDe-Projects-12-29")]
+        [InlineKeyboardButton("Other bot info", url="https://t.me/nouseridfound")],
     ]
 
 
     # Help Message
     HELP = """
-✨ **𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂** ✨ 
- /about - 𝙰𝙱𝙾𝚄𝚃 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 
- /help - 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 
- /start - 𝚂𝚃𝙰𝚁𝚃 𝙱𝙾𝚃 
- /generate - 𝚂𝚃𝙰𝚁𝚃 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙸𝙽𝙶 𝚂𝙴𝚂𝚂𝙸𝙾𝙽 
- /cancel - 𝙲𝙰𝙽𝙲𝙴𝙻 𝙿𝚁𝙾𝙲𝙴𝚂𝚂
- /restart - 𝚁𝙴𝚂𝚃𝙰𝚁𝚃 𝙿𝚁𝙾𝙲𝙴𝚂𝚂 
-    """
+✨ **Available Commands** ✨
+/about - About this bot
+/help - How to use this bot
+/start - Start Bot
+/generate - Start Generating Session
+/cancel - Cancel process
+/restart - Restart process
+"""
 
     # About Message
     ABOUT = """
-**𝙰𝙱𝙾𝚄𝚃 𝙳𝙴𝙲𝙾𝙳𝙴 𝙱𝙾𝚃𝚉**
-𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 : [𝙳𝙴𝙲𝙾𝙳𝙴](HTTPS://T.ME/DECODESUPPORT)
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : [𝚂𝙰𝙼𝙼𝚈](https://github.com/BrayDanXD)
-   
-[𝙵𝙾𝙻𝙻𝙾𝚆 𝙾𝙽 𝙶𝙸𝚃𝙷𝚄𝙱](https://github.com/BRAYDNAXD)
-𝙳𝙴𝙲𝙾𝙳𝙴 𝙼𝚄𝚂𝙸𝙲 : [𝙳𝙴𝙿𝙻𝙾𝚈 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃](https://GitHub.com/braydanxd/promusic)
-   """
-   
+**About This Bot** 
+A telegram bot to retrieve pyrograms and telethon string sessions by @nouseridfound
+Group Support : [Gabung](https://t.me/br29siwan)
+Framework : [Pyrogram](docs.pyrogram.org)
+Language : [Python](www.python.org)
+Developer : @nouseridfound
+    """
