@@ -47,8 +47,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram")
                ]])
         
-    query in ["pyrogram"]:
-        await callback_query.answer()
+         await callback_query.answer()
         try:
             if query == "pyrogram":
                 await generate_session(bot, callback_query.message)
@@ -63,8 +62,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                  InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")
                  ]])
              
-   query in ["telethon"]:
-        await callback_query.answer()
+     await callback_query.answer()
         try:
             if query == "telethon":
                 await generate_session(bot, callback_query.message)
