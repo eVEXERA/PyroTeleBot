@@ -41,20 +41,20 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
-    elif query == "pyrogram":
-               
-         await callback_query.answer()
-        
-         generate_session(bot, callback_query.message)
+    elif query == "generate":
+        await callback_query.message.reply(
+            "Please Choose Which String You Want To Take 🙂",
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("Pyrogram", callback_data="pyrogram"),
+                InlineKeyboardButton("Telethon", callback_data="telethon")
+            ]])
+        )
+    elif query in ["pyrogram", "telethon"]:
+        await callback_query.answer()
+        try:
+            if query == "pyrogram":
+                await generate_session(bot, callback_query.message)
             else:
-                 generate_session(bot, callback_query.message, telethon=True)
-        except Exception as e:
-            await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
-
-    elif query == "telethon":
-              await callback_query.answer()
-          generate_session(bot, callback_query.message)
-            else:
-                await generate_session(bot, callback_query.message, pyrogram=True)
+                await generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
