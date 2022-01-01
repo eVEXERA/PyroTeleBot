@@ -43,10 +43,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         )
     elif query == "generate":
         await callback_query.message.reply(
-            "Please Choose Which String You Want To Take 🙂",
-            reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Pyrogram", callback_data="pyrogram"),
-                InlineKeyboardButton("Telethon", callback_data="telethon")
+             reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("𝙶𝙴𝚃 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="pyrogram"),
+                InlineKeyboardButton("𝙶𝙴𝚃 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚂𝙴𝚂𝚂𝙸𝙾𝙽", callback_data="telethon")
             ]])
         )
     elif query in ["pyrogram", "telethon"]:
