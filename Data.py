@@ -23,7 +23,6 @@ class Data:
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴 𝚃𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴 𝚂𝚃𝚁𝙸𝙽𝙶", callback_data="generate")],
         [InlineKeyboardButton("𝙼𝙰𝙸𝙽𝚃𝙴𝙽𝙰𝙽𝙲𝙴 𝙱𝚈", url="https://t.me/TeamDeecode")],
         [
             InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴", callback_data="help"),
